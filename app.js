@@ -44,5 +44,9 @@
 // greetTravisScott();
 // pass to require the location of teh module you wish to import 
 // node grabs this file and then executed the javascript file 
+// set a variable equal to the results of the function 
 
-require('./greet.js');
+// set greetingssenor to whatever is returned by greet.js - in this case it is the function called greet so we can now call greetingssenor as a function
+const greetingsSenor = require('./greet.js');
+
+greetingsSenor();
