@@ -25,3 +25,4 @@ Emitter2.prototype.emit = function(type) {
 
 
 module.exports = Emitter2;
+
