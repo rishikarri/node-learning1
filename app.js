@@ -1,11 +1,10 @@
-var Emitter = require('./emitter'); 
+const emitter = require('./emitter2.js');
 
-var myNewEmitter = new Emitter(); 
+emtr = new emitter();
+// now has an empty events object
 
-myNewEmitter.on('greet', function(){
-	console.log('someone said hello');
+emtr.on('greet', function() {
+	console.log('it is lit');
 });
 
-
-// this will run whenever the greet function is emitted
-// i'm calling it an event but it's really a property name
+emtr.emit('greet');
