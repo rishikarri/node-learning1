@@ -1,36 +1,30 @@
-// // magic string - a string that has some special meaning in our code - this is bad because we can't find errors as easily - let's make them variables 
-// const Emitter = require('events');
-// const eventConfig = require('./config.js').events;
+var EventEmitter = require('events');
 
-// // grabbing emitter - you simply just need to grab them from events 
+var util = require('util');
 
-
-// const emtr = new Emitter();
-
-// emtr.on(eventConfig.GREET, () => {
-// 	console.log('somewhere someoene said hello');
-// })
-
-// emtr.on(eventConfig.GREET, () => {
-// 	console.log(' it is lit')
-// })
-
-// emtr.emit('greet');
-
-var person = {
-	firstname: '',
-	lastname: '', 
-	greet: function() {
-		return this.firstname; 
-	}
+function Greeter() {
+	this.greeting = 'hello world!';
 }
 
-// I want this to be the prototype of some other objects that I construct - i am just building the object that I want to be the prototype
+// any objects created using greeter constructor, should also have all eventemitter prototype's methods and properties
+util.inherits(Greeter, EventEmitter);
 
-// when i'm done I will have an empty object who's prototype is person
-var john = Object.create(person);
 
-john.lastname = 'doe';
-john.firstname = 'john';
 
-console.log(john.greet());
+
+// emit is coming from the fact that greeter is from the event emitter
+Greeter.prototype.greet = function(data) {
+	console.log(this.greeting); 
+	this.emit('greet', data);
+}
+
+// emit is coming from the fact that greeter is also and event emitter
+
+var greeter1 = new Greeter();
+
+greeter1.on('greet', function(data) {
+	console.log('someone greeted!' + data);
+})
+
+greeter1.greet('tony');
+
