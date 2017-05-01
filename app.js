@@ -1,30 +1,14 @@
-var EventEmitter = require('events');
+var name = 'John Doe';
 
-var util = require('util');
+var greet = 'Hello ' + name; 
 
-function Greeter() {
-	this.greeting = 'hello world!';
-}
+// backtick signals template literal
 
-// any objects created using greeter constructor, should also have all eventemitter prototype's methods and properties
-util.inherits(Greeter, EventEmitter);
+var greet2 = `Hello ${ name }`;
+
+console.log(greet2);
+
+// in the case of node it is supported because i have hte latest version of node 
 
 
-
-
-// emit is coming from the fact that greeter is from the event emitter
-Greeter.prototype.greet = function(data) {
-	console.log(this.greeting); 
-	this.emit('greet', data);
-}
-
-// emit is coming from the fact that greeter is also and event emitter
-
-var greeter1 = new Greeter();
-
-greeter1.on('greet', function(data) {
-	console.log('someone greeted!' + data);
-})
-
-greeter1.greet('tony');
 
