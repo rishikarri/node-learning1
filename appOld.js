@@ -160,3 +160,18 @@ console.log(buf.toJSON())
 buf.write('wo');
 console.log(buf.toString());
 
+var buffer = new ArrayBuffer(8);
+var view = new Int32Array(buffer);
+view[0] = 5;
+view[1] = 15;
+console.log(view);
+
+
+// view is letting  me work with binary data in an easier way - letting me put in normal binary numbers 
+// a view is a typedarray - a way for me to deal with teh binary data in the buffer
+// when I read from the array, I am reading from the buffer which converts the binary data into any structure that we want
+// Int32 - an integer stored with 32 0s and 1s 
+// the above is storing 64 bits of data
+// this is not coming from node, this is coming from the v8 javascript engine
+// a byte is 8 bits
+
