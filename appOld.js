@@ -100,3 +100,49 @@ greeter1.on('greet', function(data) {
 })
 
 greeter1.greet('tony');
+
+
+
+// javascript engine will be pickier about the things it lets you and doesn't let you do 
+// this means that it is a constructor - a creater of objects
+
+class Person {
+	constructor(firstname, lastname) {
+		this.firstname = firstname,
+		this.lastname = lastname
+	}
+
+	greet() {
+		console.log(`Hello ${this.firstname} ${this.lastname} it is lit!`)
+	}
+}
+
+var tscott = new Person('travis', 'scott');
+
+tscott.greet();
+
+// anything you add to the object inside the constructor works like a function constructor and adds it to each object created
+// and any other methods you put inside the class are automatically put on the prototype and then you can add methods
+
+// es6 classes - a new way to build objects - doesn't change anything under the hood - so it is syntactic sugar - syntactic sugar is a feature that only changes how you type something, but nothing changes under the hood
+
+'use strict';
+
+// emitter
+
+var Greeter = require('./greeter.js');
+
+
+// Greeter is an extension of Event Emitter - EVentEmtiter is the prototype of Greeter
+
+
+
+// exporting the class itself
+
+const greeter1 = new Greeter();
+
+greeter1.on('greet', function(data){
+	console.log('someone greeted ' + data)
+})
+
+greeter1.greet('hi')
