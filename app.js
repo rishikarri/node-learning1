@@ -1,19 +1,8 @@
-function greet(callback){	
-	const data = {
-		name: 'Travis Scott',
-	}
+var fs = require('fs');
 
-	const data2 = {
-		name: 'rishi'
-	}
-	callback(data2)
-	console.log('hello');
+// this deals with the file system 
 
-	
-	callback(data);
-}
+// I can read the text file now - we are dealing with files on our operating system 
 
-greet(function(data){
-	console.log('it is lit');
-	console.log(data.name)
-})
+// takes a few parameters, first thing it takes is the location of the file 
+var greet = fs.readFileSync()
