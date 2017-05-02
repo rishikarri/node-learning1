@@ -1,9 +1,5 @@
-// Buffer is a feature that is globally available to javascript
+var buffer = new ArrayBuffer(8);
+// the above is storing 64 bits of data
+// this is not coming from node, this is coming from the v8 javascript engine
+// a byte is 8 bits
 
-var buf = new Buffer('Hello', 'utf8');
-
-// I have asked the buffer to take this string and convert it to binary data
-// take this, use the unicode character set 
-console.log(buf);
-console.log(buf.toString());
-console.log(buf.toJSON())
