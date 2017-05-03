@@ -1,25 +1,15 @@
 var fs = require('fs');
 
-// this deals with the file system 
+// highWaterMark: how big we want to make our chunks to be
+var readable = fs.createReadStream(__dirname + '/greet.txt', {
+	encoding: 'utf8',
+	highWaterMark: 100
+	
+});
 
-// I can read the text file now - we are dealing with files on our operating system 
-
-// takes a few parameters, first thing it takes is the location of the file 
-// __dirname gives me the path to the directory that the code i'm writing lives in 
-
-// looking at the file, will read the binary data and then will use the encoding to determine what the 0s and 1s mean
-// grab whatever I read and save it to greet 
-var greet = fs.readFileSync(__dirname + '/greet.txt', 'utf8')
-console.log(greet)
-
-
-// please go out and asynchronously get file contents and here is the callback for when you are done getting the data.
-var greet2 = fs.readFile(__dirname + '/greet.txt', 'utf8', function(err, data){
-	console.log(data);
-	console.log(err);
+// the stream will fill up a buffer with contents
+// if the contents are smaller than the buffer, you get all the data
+// if it's bigger then you get portions of the file and then a data event is emitted until it finishes the file 
+readable.on('data', function(chunk){
+	console.log(chunk);
 })
-// var greet = fs.readFileSync('./greet.txt')
-// what comes back by default is a buffer
-
-// while waiting, this last line was run 
-console.log('done');
