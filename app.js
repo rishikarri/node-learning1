@@ -17,3 +17,6 @@ readable.on('data', function(chunk){
 	console.log(chunk);
 	writable.write(chunk);
 })
+
+// readable is the source, writable is the destination. sets up the event listener to listen for the chunk of data 
+readable.pipe(writable);
