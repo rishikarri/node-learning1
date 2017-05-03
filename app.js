@@ -1,22 +1,11 @@
-var fs = require('fs');
+var http = require('http');
 
-// highWaterMark: how big we want to make our chunks to be
-var readable = fs.createReadStream(__dirname + '/greet.txt', {
-	encoding: 'utf8',
-	highWaterMark: 100
-	
-});
+// a method available to me that creates a new server objects
+// when the server object emits an event, parameter is a callback - turns out to be an event listener
+// we need to build a response 
 
-// the stream will fill up a buffer with contents
-// if the contents are smaller than the buffer, you get all the data
-// if it's bigger then you get portions of the file and then a data event is emitted until it finishes the file 
+http.createServer(function(req, res) {
 
-var writable = fs.createWriteStream(__dirname + '/greetcopy.txt');
+	res.writeHead(200, { 'Content-Type':  })
 
-readable.on('data', function(chunk){
-	console.log(chunk);
-	writable.write(chunk);
 })
-
-// readable is the source, writable is the destination. sets up the event listener to listen for the chunk of data 
-readable.pipe(writable);

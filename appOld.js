@@ -194,3 +194,38 @@ greet(function(data){
 	console.log('it is lit');
 	console.log(data.name)
 })
+
+
+var fs = require('fs');
+var zlib = require('zlib');
+
+// gzip - an algorithm for compressing files
+
+// highWaterMark: how big we want to make our chunks to be
+var readable = fs.createReadStream(__dirname + '/greet.txt', {
+	encoding: 'utf8',
+	highWaterMark: 100
+	
+});
+
+// the stream will fill up a buffer with contents
+// if the contents are smaller than the buffer, you get all the data
+// if it's bigger then you get portions of the file and then a data event is emitted until it finishes the file 
+
+var writable = fs.createWriteStream(__dirname + '/greetcopy.txt');
+
+readable.on('data', function(chunk){
+	console.log(chunk);
+	writable.write(chunk);
+})
+
+// this creates a readable and writable tranfrer stream
+// creating a compressed file but it is a stream
+var compressed = fs.createWriteStream(__dirname + '/greet.txt.gz')
+
+var gzip = zlib.createGzip();
+// readable is the source, writable is the destination. sets up the event listener to listen for the chunk of data 
+readable.pipe(writable);
+
+// gzip will return a readable stream which i can pipe to my writable compressed stream
+readable.pipe(gzip).pipe(compressed)
