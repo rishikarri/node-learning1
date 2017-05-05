@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-test-app",
+  "version": "1.0.0",
+  "description": "Nodejs Test APp",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rishikarri/node-learning1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rishikarri/node-learning1/issues"
+  },
+  "homepage": "https://github.com/rishikarri/node-learning1#readme",
+  "dependencies": {
+    "moment": "^2.18.1"
+  }
+}

@@ -19,15 +19,24 @@ var fs = require('fs');
 
 http.createServer(function(req, res) {
 
-	if
-	res.writeHead(200, { 'Content-Type': 'application/json'})
+	if (req.url === '/'){
+		fs.createReadStream(__dirname + '/index.htm').pipe(res);
+	}
+	if (req.url === '/api') {
 
-	var obj = {
-		firstname: 'Travis',
-		lastname: 'Scott'
+
+		res.writeHead(200, { 'Content-Type': 'application/json'})
+
+		var obj = {
+			firstname: 'Travis',
+			lastname: 'Scott'
+		}
+
+		res.end(JSON.stringify(obj));
 	}
 
-	res.end(JSON.stringify(obj));
+	res.writeHead(404);
+	res.end('not found');
 
 }).listen(1337, '127.0.0.1')
 
