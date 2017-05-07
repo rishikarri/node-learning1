@@ -38,9 +38,6 @@ console.log(greet2);
 
 // in the case of node it is supported because i have hte latest version of node 
 
-
-
-
 var obj = {
 	name: 'Rishi Karri',
 	greet: function() {
@@ -62,8 +59,6 @@ obj.greet.apply({
 
 // so you can borrow a function and give it a new object to use the this statement
 // this will invoke the function just like the parantheses does, but the difference is that whatever I point to call will invoke what the this keyword points to
-
-
 
 
 // emitter
@@ -271,6 +266,5 @@ http.createServer(function(req, res) {
 }).listen(1337, '127.0.0.1')
 
 // we have a listen method that we can listen on 
-
 // standard internal ip address is 127.0.0.1
 // if i type localhost on my browser that will translate to my computer 
