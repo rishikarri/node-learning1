@@ -10,5 +10,7 @@ module.exports = class Greeter extends EventEmitter {
 		console.log(this.greeting)
 		this.emit('greet', data)
 	}
-	
+	sayHello() {
+		console.log('hello');
+	}
 }
