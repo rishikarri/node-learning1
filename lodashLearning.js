@@ -15,4 +15,18 @@ var people = [
 
 var result = _(people).filter({age: 22}).value();
 
+// console.log(_.add(3, 4))
+
+
+// => 9
+
+function cube(n) {
+  return n * n * n;
+}
+
+var addSquare = _.flow([_.add, cube]);
+console.log(addSquare(1, 2));
+
+
+
 console.log(result);
