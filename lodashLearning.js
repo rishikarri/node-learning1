@@ -13,6 +13,6 @@ var people = [
 
 // lodash a helpful set of utilities to quickly iterate and create iterables
 
-var result = _(people).sortBy('age').value();
+var result = _(people).filter({age: 22}).value();
 
 console.log(result);
