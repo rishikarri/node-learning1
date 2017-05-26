@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/rishikarri/node-learning1#readme",
   "dependencies": {
+    "lodash": "^4.17.4",
     "moment": "^2.18.1"
   }
 }
