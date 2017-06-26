@@ -1,26 +1,13 @@
-// var EventEmitter = require('events');
-
-// module.exports = class Greeter extends EventEmitter {
-// 	constructor() {
-// 		super();
-// 		this.greeting = 'hello world!';
-// 	}
-
-// 	greet(data) {
-// 		console.log(this.greeting)
-// 		this.emit('greet', data)
-// 	}
-// 	sayHello() {
-// 		console.log('hello');
-// 	}
-// }
-
-// function addition(a, b) {
-// 	return a + b; 
-// }
-
-const addition = (a,b) => {
-	return a + b; 
+const objA = {
+  a: 1,
+  b: 2,
+  c: 3,
 }
 
-console.log(addition(5,5));
+// return { ...state, visibilityFilter: action.filter }
+
+function createObject () {
+  return { ...objA, b:'djiso' };
+}
+
+console.log(createObject());
