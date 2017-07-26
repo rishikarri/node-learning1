@@ -1,6 +1,5 @@
 hello, my name is rishi, it is lit
 
-whoa hihihihihihiohi
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit elit quis finibus imperdiet. Praesent ac lacus a augue cursus feugiat. Etiam ac lacus vitae lectus dignissim mattis at sed tellus. Morbi scelerisque ornare mauris quis aliquam. Vestibulum et condimentum diam, ac viverra nibh. Curabitur nec consequat felis, mollis efficitur libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed ullamcorper dui nec diam accumsan condimentum. Donec nulla nisl, bibendum vitae rutrum non, vulputate et purus. Phasellus hendrerit elit augue, vitae cursus dui gravida sit amet.
 
