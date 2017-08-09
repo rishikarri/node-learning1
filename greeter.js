@@ -11,3 +11,5 @@ function createObject () {
 }
 
 console.log(createObject());
+
+// learned that you need babel to be able to compile the new spread operator 
