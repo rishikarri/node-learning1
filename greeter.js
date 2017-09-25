@@ -4,6 +4,10 @@ const objA = {
   c: 3,
 }
 
+const objB = {
+	a: 2,
+}
+
 // return { ...state, visibilityFilter: action.filter }
 
 function createObject () {
