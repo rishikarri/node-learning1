@@ -19,6 +19,11 @@ console.log(createObject());
 const a = [1, 21]; 
 const b = [1, 21]; 
 
+
+// jasmine-node is a tool that helps us write automated tests - automatically teest my software as i build it 
+// the above is a dev dependency - i don't need it for the app to run but i do need it as a developer 
+
+// --save-dev - this is now a development dependency
 // learned that you need babel to be able to compile the new spread operator 
 //also learned how to use redux logic 
 // 75% done through udemy course
