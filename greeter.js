@@ -6,6 +6,8 @@ const objA = {
 
 const objB = {
 	a: 2,
+	b: 3,
+	c: 4,
 }
 
 // return { ...state, visibilityFilter: action.filter }

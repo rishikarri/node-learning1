@@ -1,4 +1,4 @@
-var moment = require('moment');
+var express = require('express');
+var app = express(); // this is a working express app 
 
-//logs the current time and hour with am or pm
-console.log(moment().format("ddd, hA"));
+app.listen(3000); 
