@@ -16,6 +16,13 @@ app.get('/', function(req, res) {
 	res.send('<html><head> <link href=assets/styles.css type=text/css rel=stylesheet /> </head> <body><h1>hello w </h1></body></html>')
 })
 
+// app.use just matches a route and then takes a function - express.static 
+app.use('/', function(req, res, next) {
+	// whenever this route hits, this route will be executed
+	console.log('Request Url: ' + req.url); 
+	next();
+})
+
 // the browswer loaded and then there was  link to assets / styles.css - which was available in public and then it loaded styles.css
 
 app.get('/api', (req, res) => {
