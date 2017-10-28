@@ -7,6 +7,17 @@ const port = process.env.PORT || 3000;
 
 app.use ('/assets', express.static(__dirname + '/public'))
 
+app.set('view engine', 'ejs');
+
+app.get('/', function(req, res) {
+	res.render('index', { ID: req.params.id });
+
+	// render it and then you can give it data, use the object, automatically getting any properties on that object
+	// res is the response, it responds with ejs  automaticaly looks for the ejs file render is what it loads to the screen
+})
+
+
+
 //everytime we see /assets, what i'll do is go find this full file path public and return these files 
 // this variable port will be either equal to the environment variable or local host 3000  
 
