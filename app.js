@@ -1,16 +1,19 @@
 const express = require('express');
 const app = express(); // this is a working express app 
+var bodyParser = require('body-parser'); //now i ahve an objec that the body parsing module gives back to me from the require function 
 
 // use environment variables to make sure we are listening on the right port
 
 const port = process.env.PORT || 3000; 
+
+var urlencodedParser = bodyParser.urlencoded({extended: false})
 
 app.use ('/assets', express.static(__dirname + '/public'))
 
 app.set('view engine', 'ejs');
 
 app.get('/', function(req, res) {
-	res.render('index', { ID: req.params.id });
+	res.render('index', { ID: req.params.id, Qstr: req.query.qstr });
 
 	// render it and then you can give it data, use the object, automatically getting any properties on that object
 	// res is the response, it responds with ejs  automaticaly looks for the ejs file render is what it loads to the screen
@@ -45,9 +48,21 @@ app.get('/api', (req, res) => {
 })
 
 app.get('/person/:id', function (req, res) {
-	res.send('<html><head></head> <body><h1>hello Person: ' +req.params.id+' </h1></body></html>')
-
+	res.render('person', { ID: req.params.id, Qstr: req.query.qstrdd });
 })
 
+app.post('/person', urlencodedParser, function(req, res) {
+	res.send('Thank You');
+	console.log(req.body.firstname) // req.body is added by the middleware 
+	console.log(req.body.lastname) // req.body is added by the middleware 
+})
+
+app.post('personjson', jsonParser, function(req, res) {
+	res.send('Thank you for the JSON data!');
+	console.log(req.body.firstname)
+	console.log(req.body.lastname)
+})
+
+// learned how query strings work 
 app.listen(port); 
 
