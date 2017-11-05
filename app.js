@@ -70,3 +70,7 @@ app.listen(port);
 // EC2 stands for Elastic Compute Generation 2 which means you can purchase or lease hardware or software infrastructure hosted on cloud by the provider on an on demand basis. Elastic meaning you can grow your usage or shrink your usage and pay for what you have used.
 
 // can lease hardware or software infras
+
+
+// REST - stand sfor representational state transfer. We decide that HTTP verbs and URLS mean something
+// we advocate using HTTP as it was originally envisioned 
