@@ -119,3 +119,27 @@ app.listen(port);
 // javascript engine - a program that converts javascript code into something the compupter processor can understand
 // should follow the ecmascript standard which tells us how the language should work and what features it should have
 
+
+// nodejs is a server technology 0 t is designed to be able to use javascript ot write server code
+
+// a server is a computer that is performing services - it is just a computer and it is performing jobs that are requested of it
+
+// the client asks for the services 
+
+// the client makes a request for a service for some work to be performed
+
+// and the server responds with error messages or data or verification 
+
+// that request is in a standard format that both the client and the server are programmed to understand
+
+// both the client and the server are computers 
+
+// a web server is a computer connected to the internet that is accepting request to work or data 
+
+// the standard format for requests and response are http 
+
+// javascript is the language that the browsers have standardized on 
+
+// chrome firefox etc - implement a javascript engine of some sort
+
+// the goal with node js is to write javascript on teh webserver 
