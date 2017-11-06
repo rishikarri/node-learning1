@@ -105,3 +105,17 @@ app.listen(port);
 // node is written in c++ - when we write node we write javascript, node itself is written in c++ 
 // it is a c++ program because v8 (the javascript engine) is written in c++ 
 // v8 is the thing that converts javascript to machine code and is written in c++ 
+
+// ecmascript is the standard that javascript is based on 
+// different browsers started making javascript engines and little tweaks and changes between them
+// the ECMA - is a standards organization that says this is hwo something should work 
+// we needed a standard becasue there are many engines out there 
+// v8 is actually just one of many javascript engines
+// javascript is the actual language that we are writingand ecmascript is the standard that says how it is supposed to work
+// if you look at docs you would see all sorts of things that javascript is supposed to have and supposed to do 
+// describes javascripts behavior 
+// if you were to write your own javascript engine, it should match the specification 
+// v8 does that - makes sure that when you write javascript code, it compiles to machine code that matches the specification
+// javascript engine - a program that converts javascript code into something the compupter processor can understand
+// should follow the ecmascript standard which tells us how the language should work and what features it should have
+
