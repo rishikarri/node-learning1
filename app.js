@@ -74,3 +74,34 @@ app.listen(port);
 
 // REST - stand sfor representational state transfer. We decide that HTTP verbs and URLS mean something
 // we advocate using HTTP as it was originally envisioned 
+// let's standardize on a way of using HTTP request so wehn they are sent, wehn you read them 
+// they actually match what is happening
+
+// have an api so that it responds to the http requests in the way that is expected
+
+// Command line interface - a utility to type commands to your computer rather than clicking with teh mouse 
+// all work the same way - you type in a command and a program you want to run and htey run
+// how computers used to be - GUIs - computers used to be something where you just type in and look at words 
+// on the screen - use a lot of command 
+
+// a microporcessor is a tiny machine - with very small parts that work in tandem with electrical inputs and ultimately do a job
+// we give the microporcessor instructions
+// we give instructions to the microprocessor - it gets instructions in IA-32, x86-64, ARM, MIPS
+// the processor is a physical thing, it is something that you can hold in your hand 
+// it is a machine that accepts instructions and carries them out 
+// machine code programming languages spoken by computer processors - every program you run on your computer has been compiled to machine code 
+// all code eventualy becomes machine code and the amchine is waht carries out the requirements
+// whenver we are writing a programming language, there is some other process that is converting it into macine code
+// we don't write machine code is because it's really hard to understand
+// what to do with what pieces of memory on your computer - very very low level
+// instead of writing in machine code, we write in languages taht are compiled into machine code
+// machine language - lowest level - directly speaking to the microprocessor
+// assembly language - very low but incredibly low level language but still low level
+// huge error of c / c++ - still lets you have a degree of control that is lower level and a bit closer to hte microprocessor itself
+// c / c++ is great because you ahv ea great level of control but easier to code in than assembly language or machine code
+// javascript - really high level - very very very far remove from the computer's processor - don't deal with memory at all
+// you have an engine between the langauge 
+// when we talk about javascript, we talk about writing a language that other languages get converted to machine code
+// node is written in c++ - when we write node we write javascript, node itself is written in c++ 
+// it is a c++ program because v8 (the javascript engine) is written in c++ 
+// v8 is the thing that converts javascript to machine code and is written in c++ 
